@@ -3,8 +3,8 @@ const ctx = canvas.getContext("2d");
 
 // Game State
 let gameState = "START"; // START, PLAYING, WON, PROPOSAL, END
-let score = 16;
-const WIN_SCORE = 0; // Hearts needed to fill the meter
+let score = 0;
+const WIN_SCORE = 15; // Hearts needed to fill the meter
 let player;
 let hearts = [];
 let particles = []; // For effects
@@ -14,7 +14,7 @@ let loveMeter = document.getElementById("love-fill");
 // DOM Elements
 const startScreen = document.getElementById("start-screen");
 const proposalScreen = document.getElementById("proposal-screen");
-const celebrationScreen = document.getElementById("celebration-screen");
+const celebrationScreen = document.getElementById("c elebration-screen");
 const startBtn = document.getElementById("start-btn");
 const yesBtn = document.getElementById("yes-btn");
 const noBtn = document.getElementById("no-btn");
@@ -114,7 +114,7 @@ class Heart {
       this.x - this.size / 2,
       this.y,
       this.x - this.size / 2,
-      this.y + topCurveHeight
+      this.y + topCurveHeight,
     );
     // bottom left curve
     ctx.bezierCurveTo(
@@ -123,7 +123,7 @@ class Heart {
       this.x,
       this.y + (this.size + topCurveHeight) / 2,
       this.x,
-      this.y + this.size
+      this.y + this.size,
     );
     // bottom right curve
     ctx.bezierCurveTo(
@@ -132,7 +132,7 @@ class Heart {
       this.x + this.size / 2,
       this.y + (this.size + topCurveHeight) / 2,
       this.x + this.size / 2,
-      this.y + topCurveHeight
+      this.y + topCurveHeight,
     );
     // top right curve
     ctx.bezierCurveTo(
@@ -141,7 +141,7 @@ class Heart {
       this.x,
       this.y,
       this.x,
-      this.y + topCurveHeight
+      this.y + topCurveHeight,
     );
     ctx.fill();
   }
@@ -309,5 +309,3 @@ function triggerConfetti() {
 
 // Initialize
 resize();
-
-
