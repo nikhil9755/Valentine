@@ -3,7 +3,7 @@ const ctx = canvas.getContext("2d");
 
 // Game State
 let gameState = "START"; // START, PLAYING, WON, PROPOSAL, END
-let score = 15;
+let score = 16;
 const WIN_SCORE = 0; // Hearts needed to fill the meter
 let player;
 let hearts = [];
@@ -309,4 +309,5 @@ function triggerConfetti() {
 
 // Initialize
 resize();
+
 
