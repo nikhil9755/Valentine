@@ -4,7 +4,7 @@ const ctx = canvas.getContext("2d");
 // Game State
 let gameState = "START"; // START, PLAYING, WON, PROPOSAL, END
 let score = 0;
-const WIN_SCORE = 15; // Hearts needed to fill the meter
+const WIN_SCORE = 0; // Hearts needed to fill the meter
 let player;
 let hearts = [];
 let particles = []; // For effects
@@ -14,7 +14,7 @@ let loveMeter = document.getElementById("love-fill");
 // DOM Elements
 const startScreen = document.getElementById("start-screen");
 const proposalScreen = document.getElementById("proposal-screen");
-const celebrationScreen = document.getElementById("c elebration-screen");
+const celebrationScreen = document.getElementById("celebration-screen");
 const startBtn = document.getElementById("start-btn");
 const yesBtn = document.getElementById("yes-btn");
 const noBtn = document.getElementById("no-btn");
